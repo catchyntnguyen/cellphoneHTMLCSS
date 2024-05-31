@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CellphoneS</title>
+</head>
+<!-- fontawesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- Main css -->
+<link rel="stylesheet" href="../css/basket.css">
+<!-- reponsive css -->
+<link rel="stylesheet" href="/css/reponsive.css">
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+<!-- heart -->
+<link rel="stylesheet" href="/css/heart.css">
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<body>
+    <section class="header">
+        <div class="menu_header">
+            <a class="header_logoimg" href="/"><img class="header_logo" src="../img/logocell-removebg-preview.png"
+                    alt="">
+            </a>
+            <a class="header_logoimg2" href=""><img style="width: 60px; display: none;" class="header_logo2"
+                    src="../img/logo2.png" alt="">
+            </a>
+            <div class="header_list">
+                <i class="fa-regular fa-rectangle-list"></i>
+                <a href="#">Danh mục</a>
+            </div>
+            <div class="loca_HCM">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                    <a href=""> Xem giá tại </a><i class="fa-solid fa-chevron-down"></i><br>
+                    <a href="">Hồ Chí Minh</a>
+                </div>
+            </div>
+            <label class="input_header" for=""><i class="fa-solid fa-magnifying-glass"></i><input type="text1"
+                    placeholder="Bạn cần gì ?"></label>
+            <div class="header_phone">
+                <i class="fa-solid fa-phone"></i>
+                <a class="header_3cham " href="">Gọi mua hàng
+                    1800.2097</a>
+            </div>
+            <div class="header_car">
+                <i class="fa-solid fa-truck-fast"></i>
+                <a class="header_3cham " href="">Tra cứu
+                    đơn hàng</a>
+            </div>
+            <div class="header_bag">
+                <div style="text-align: center;" class="slgiohang"> <i class="fa-solid fa-bag-shopping"></i>
+                    <b id="sosp">0</b>
+                </div>
+                <a href="/cart">Giỏ
+                    hàng</a>
+            </div>
+            <!-- <div class="header_user click" id="poupUser">
+                        <i class="fa-solid fa-user"></i>
+                        <span id="name_login">
+                        </span>
+                        <div class="poup-User div1">
+                            <div class="triangle"></div>
+                            <div class="content_poupUser">
+                                <div>
+                                    <a href="/logout" class="poupUser-item">
+                                        <div class="poup_left">
+                                            <div class="poup-img"></div>
+                                            <div class="poup-text">Đăng xuất</div>
+                                        </div>
+                                        <div class="poup_right"><i class="fa-solid fa-right-from-bracket"></i></div>
+                                    </a>
+
+                                </div>
+                                <div class="poupUser-item--end">
+                                    <hr>
+                                    Đóng
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+            <a href="/login" class="header_user" id="btn_login">
+                <i class="fa-solid fa-user"></i>
+                <span>Đăng Nhập</span>
+            </a>
+        </div>
+    </section>
+     <div class="chose_login" id="chose">
+        <div>
+            <div class="chose_login--header ">
+                <div><img src="https://cdn2.cellphones.com.vn/213x213,webp,q100/media/wysiwyg/Shipper_CPS.jpg" alt="">
+                </div>
+                <div class="Smember"><b>Smember</b></div>
+                <i class="fa-solid fa-x" onclick="chosecancel()"></i>
+            </div>
+            <div class="chose_login--text">
+                <p>Vui lòng đăng nhập tài khoản Smember để có trải nghiệm mua sắm tốt hơn</p>
+            </div>
+            <div class="chose_login--btn">
+                <div class="login"><a href="/login"><b>Đăng nhập ngay</b></a></div>
+                <div class="signup1"><a href="/register"><b>Đăng ký</b></a></div>
+            </div>
+        </div>
+    </div>
+    <main class="basket">
+        <div class="backmenu">
+            <div style="margin-left: 50px;">
+                Giỏ hàng
+            </div>
+            <div class="trove">
+                <i class="fa-solid fa-chevron-left"></i>
+                <a href="/">Trở về</a>
+            </div>
+        </div>
+        <!-- <div class="nobuy" id="nobuy">
+            <div class="icon_boring"> <i class="fa-solid fa-face-frown"></i></div>
+            <div class="isgpd">Không có sản phẩn nào tron giỏ hàng, vui lòng quay lại</div>
+            <div class="btn_isgpd"><a style="color: white;" href="/">Quay lại trang chủ</a></div>
+        </div> -->
+        </section>
+        <div id="showcart">
+            <div class="dacosp">
+                <div class="product_basket">
+                    <div>
+                        <div class="img_product">
+                            <img src="../img-products/asus-rog-phone-6-12gb-256gb_1_1.webp" alt="Product Image">
+                        </div>
+                        <div class="img_info">
+                            <div class="title_productbasket">
+                                <div><b>
+                                    </b></div>
+                                <form action="/delete-to-cart/phone" method="POST">
+                                    <a href="" id="xoaProduct" style="cursor: pointer; color: rgb(78, 78, 78);"
+                                        class="fa-solid fa-trash"></a>
+                                </form>
+                            </div>
+                            <div class="price_productbasket">
+                                <div style="color: red;" id="priceNew">
+                                    12.000.000đ
+                                </div>
+                                <div style="text-decoration: line-through;" id="priceOld">
+                                    13.000.000đ
+                                </div>
+                                <div style="text-decoration: line-through; color: rgba(138, 138, 138, 0.534);"></div>
+                            </div>
+                            <div class="title_productbasket">
+                                <label>Số lượng:</labeld>
+                                    <div class="btnUPDown">
+                                        <div class="up">
+                                            <a href=""><i class="fa-solid fa-chevron-up"></i></a>
+                                        </div>
+                                        <input type="text" value="" id="updateQuantity">
+                                        <div class="down">
+                                            <a href=""><i class="fa-solid fa-chevron-down"></i></a>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn_productbasket" id="nutthanhtoan">
+            <div class="btn_productbasket--first">
+                <div><b>Tổng tiến tạm tính</b></div>
+                <div class="btn_productbasket--firstprice" id="thanhtien">
+                </div>
+            </div>
+            <div id="xacnhan" class="btn_productbasket--secondaly">TIẾN HÀNG ĐẶT HÀNG</div>
+            <div class="btn_productbasket--final">CHỌN THÊM SẢN PHẢM KHÁC</div>
+        </div>
+        <div class="popupPay slide-top">
+            <form id="shippingForm" action="/checkOut" method="POST">
+                <input type="hidden" name="total" value="">
+                <div class="form-group">
+                    <label for="receiverName">Tên người nhận</label>
+                    <input type="text" name="receiverName" id="receiverName">
+                </div>
+
+                <div class="form-group">
+                    <label for="receiverEmail">Email người nhận</label>
+                    <input type="text" name="receiverEmail" id="receiverEmail">
+                </div>
+
+                <div class="form-group">
+                    <label for="receiverPhone">Số điện thoại người nhận</label>
+                    <input type="text" name="receiverPhone" id="receiverPhone">
+                </div>
+
+                <div class="form-group">
+                    <label for="receiverAddress">Địa chỉ người nhận</label>
+                    <textarea name="receiverAddress" id="receiverAddress"></textarea>
+                </div>
+
+                <button type="submit"> Xác nhận</button>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
